@@ -1,0 +1,355 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Talents>
+  <Talent identifier="coolhead">
+    <Icon texture="Content/UI/TalentsIcons1.png" sheetindex="6,1" sheetelementsize="128,128" />
+    <Description tag="talentdescription.coolhead">
+      <Replace tag="[amount1]" value="6" color="gui.green" />
+      <Replace tag="[amount2]" value="20" color="gui.green" />
+    </Description>
+    <Description tag="talentdescription.unlockrecipe">
+      <Replace tag="[itemname]" value="entityname.cigar" color="gui.orange" />
+    </Description>
+    <AbilityGroupInterval interval="1">
+      <Abilities>
+        <CharacterAbilityModifyAttackData addeddamagemultiplier="0.06" />
+        <CharacterAbilityModifyStat stattype="RangedSpreadReduction" value="0.2" />
+      </Abilities>
+    </AbilityGroupInterval>
+    <AddedRecipe itemidentifier="cigar" />
+  </Talent>
+  <Talent identifier="relaxed">
+    <Icon texture="Content/UI/TalentsIcons2.png" sheetindex="7,4" sheetelementsize="128,128" />
+    <Description tag="talentdescription.relaxed">
+      <Replace tag="[amount1]" value="20" color="gui.red" />
+      <Replace tag="[stattype]" value="stattypenames.repairspeed" color="gui.orange" />
+      <Replace tag="[amount2]" value="15" color="gui.green" />
+    </Description>
+    <AbilityGroupInterval interval="1">
+      <Abilities>
+        <CharacterAbilityApplyStatusEffectsToAllies maxdistance="600" allowself="false">
+          <StatusEffects>
+            <StatusEffect type="OnAbility" target="Character" disabledeltatime="true">
+              <Affliction identifier="chilledout" strength="1.0" />
+            </StatusEffect>
+          </StatusEffects>
+        </CharacterAbilityApplyStatusEffectsToAllies>
+      </Abilities>
+    </AbilityGroupInterval>
+    <AbilityGroupEffect abilityeffecttype="None">
+      <Abilities>
+        <CharacterAbilityGiveStat stattype="RepairSpeed" value="-0.2" />
+      </Abilities>
+    </AbilityGroupEffect>
+  </Talent>
+  <Talent identifier="hazingrituals">
+    <Icon texture="Content/UI/TalentsIcons1.png" sheetindex="5,5" sheetelementsize="128,128" />
+    <Description tag="talentdescription.hazingrituals">
+      <Replace tag="[amount]" value="50" color="gui.green" />
+      <Replace tag="[STAR]" value="STARs" color="gui.orange" />
+    </Description>
+    <!-- give XP to the character itself -->
+    <AbilityGroupEffect abilityeffecttype="OnGainMissionExperience">
+      <Conditions>
+        <AbilityConditionLowestLevel />
+        <AbilityConditionJobIdentifier jobidentifier="Starling" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityModifyValue multiplyvalue="1.5" />
+      </Abilities>
+    </AbilityGroupEffect>
+    <!-- allies too -->
+    <AbilityGroupEffect abilityeffecttype="OnAllyGainMissionExperience">
+      <Conditions>
+        <AbilityConditionLowestLevel />
+        <AbilityConditionJobIdentifier jobidentifier="Starling" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityModifyValue multiplyvalue="1.5" />
+      </Abilities>
+    </AbilityGroupEffect>
+  </Talent>
+  <Talent identifier="riotsuppression">
+    <Icon texture="Content/UI/TalentsIcons1.png" sheetindex="7,2" sheetelementsize="128,128" />
+    <Description tag="talentdescription.riotsuppression">
+      <Replace tag="[amount1]" value="40" color="gui.green" />
+      <Replace tag="[amount2]" value="25" color="gui.green" />
+      <Replace tag="[stat]" value="stattypenames.meleeattackmultiplier" color="gui.orange" />
+    </Description>
+    <Description tag="talentdescription.firemanscarry" />
+    <AbilityGroupEffect abilityeffecttype="None">
+      <Abilities>
+        <CharacterAbilityGiveStat stattype="MeleeAttackMultiplier" value="0.25" />
+        <CharacterAbilityGiveFlag flagtype="MoveNormallyWhileDragging" />
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupEffect abilityeffecttype="OnAddDamageAffliction">
+      <Abilities>
+        <CharacterAbilityModifyAffliction afflictionidentifiers="stun,incrementalstun,progressivestun" addedmultiplier="0.40" />
+      </Abilities>
+    </AbilityGroupEffect>
+  </Talent>
+  <Talent identifier="closecombatant">
+    <Icon texture="Content/UI/TalentsIcons3.png" sheetindex="4,4" sheetelementsize="128,128" />
+    <Description tag="talentdescription.closecombatant">
+      <Replace tag="[amount]" value="20" color="gui.green" />
+      <Replace tag="[stat1]" value="stattypenames.meleeattackspeed" color="gui.orange" />
+      <Replace tag="[stat2]" value="stattypenames.stunresistance" color="gui.orange" />
+    </Description>
+    <Description tag="talentdescription.unlockrecipe">
+      <Replace tag="[itemname]" value="entityname.boardingaxe" color="gui.orange" />
+    </Description>
+    <AbilityGroupInterval interval="1">
+      <Conditions>
+        <AbilityConditionInHull />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityApplyStatusEffects>
+          <StatusEffects>
+            <StatusEffect type="OnAbility" target="This" multiplyafflictionsbymaxvitality="true">
+              <Affliction identifier="closecombatant" strength="1.0" />
+            </StatusEffect>
+          </StatusEffects>
+        </CharacterAbilityApplyStatusEffects>
+      </Abilities>
+    </AbilityGroupInterval>
+    <AddedRecipe itemidentifier="boardingaxe" />
+  </Talent>
+  <Talent identifier="thrillseeker">
+    <Icon texture="Content/UI/TalentsIcons3.png" sheetindex="1,4" sheetelementsize="128,128" />
+    <Description tag="talentdescription.thrillseeker"></Description>
+    <AbilityGroupEffect abilityeffecttype="OnAttacked">
+      <Abilities>
+        <CharacterAbilityApplyStatusEffects>
+          <StatusEffects>
+            <StatusEffect type="OnAbility" target="Character" disabledeltatime="true">
+              <Affliction identifier="thrillseeker" amount="10.0" />
+            </StatusEffect>
+          </StatusEffects>
+        </CharacterAbilityApplyStatusEffects>
+      </Abilities>
+    </AbilityGroupEffect>
+  </Talent>
+  <Talent identifier="gunnut">
+    <Icon texture="Content/UI/TalentsIcons1.png" sheetindex="5,3" sheetelementsize="128,128" />
+    <Description tag="talentdescription.unlockrecipe">
+      <Replace tag="[itemname]" value="entityname.revolver,entityname.revolverround,entityname.assaultrifle,entityname.assaultriflemagazine,entityname.rifle,entityname.riflebullet" color="gui.orange" />
+    </Description>
+    <AddedRecipe itemidentifier="revolver" />
+    <AddedRecipe itemidentifier="revolverround" />
+    <AddedRecipe itemidentifier="assaultrifle" />
+    <AddedRecipe itemidentifier="assaultriflemagazine" />
+    <AddedRecipe itemidentifier="rifle" />
+    <AddedRecipe itemidentifier="riflebullet" />
+  </Talent>
+  <Talent identifier="steadystride">
+    <Icon texture="Content/UI/TalentsIcons2.png" sheetindex="5,4" sheetelementsize="128,128" />
+    <Description tag="talentdescription.steadystride">
+      <Replace tag="[amount1]" value="20" color="gui.green" />
+      <Replace tag="[amount2]" value="40" color="gui.green" />
+    </Description>
+    <AbilityGroupInterval interval="1">
+      <Conditions>
+        <AbilityConditionIsAiming weapontype="handheldranged" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityGiveStat stattype="WalkingSpeed" value="0.20" />
+        <CharacterAbilityModifyStat stattype="RangedSpreadReduction" value="0.4" />
+      </Abilities>
+    </AbilityGroupInterval>
+  </Talent>
+  <Talent identifier="supportingfire">
+    <Icon texture="Content/UI/TalentsIcons1.png" sheetindex="7,1" sheetelementsize="128,128" />
+    <Description tag="talentdescription.supportingfire">
+      <Replace tag="[stattype]" value="stattypenames.rangedattackspeed" color="gui.orange" />
+      <Replace tag="[amount]" value="10" color="gui.green" />
+    </Description>
+    <AbilityGroupEffect abilityeffecttype="OnAttack">
+      <Conditions>
+        <AbilityConditionAttackData weapontype="handheldranged" />
+        <AbilityConditionCharacter targettypes="Enemy,Monster" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityApplyStatusEffects>
+          <StatusEffects>
+            <StatusEffect type="OnAbility" target="UseTarget">
+              <Affliction identifier="suppressed" strength="20" />
+            </StatusEffect>
+          </StatusEffects>
+        </CharacterAbilityApplyStatusEffects>
+      </Abilities>
+    </AbilityGroupEffect>
+  </Talent>
+  <Talent identifier="mowdown">
+    <Icon texture="Content/UI/TalentsIcons3.png" sheetindex="7,3" sheetelementsize="128,128" />
+    <Description tag="talentdescription.mowdown">
+      <Replace tag="[amount1]" value="10" color="gui.green" />
+      <Replace tag="[stat1]" value="stattypenames.turretattackspeed" color="gui.orange" />
+      <Replace tag="[stat2]" value="Turret Attack Damage" color="gui.orange" />
+      <Replace tag="[amount2]" value="20" color="gui.green" />
+      <Replace tag="[duration]" value="10" color="gui.green" />
+    </Description>
+    <AbilityGroupEffect abilityeffecttype="OnAttack">
+      <Conditions>
+        <AbilityConditionAttackData weapontype="Turret" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityGiveStat stattype="TurretAttackSpeed" value="0.10" />
+        <CharacterAbilityModifyAttackData addeddamagemultiplier="0.10" />
+      </Abilities>
+    </AbilityGroupEffect>
+    <AbilityGroupEffect abilityeffecttype="OnKillCharacter">
+      <Conditions>
+        <AbilityConditionCharacter targettype="Enemy,monster">
+          <Conditional ispet="false" />
+        </AbilityConditionCharacter>
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityApplyStatusEffects>
+          <StatusEffects>
+            <StatusEffect type="OnAbility" target="This">
+              <Affliction identifier="mowdown" strength="1.0" />
+            </StatusEffect>
+          </StatusEffects>
+        </CharacterAbilityApplyStatusEffects>
+      </Abilities>
+    </AbilityGroupEffect>
+  </Talent>
+  <Talent identifier="drillofficer" abilityeffectsstackwithsametalent="false">
+    <Icon texture="Content/UI/TalentsIcons1.png" sheetindex="0,5" sheetelementsize="128,128" />
+    <Description tag="talentdescription.drillofficer">
+      <Replace tag="[amount]" value="20" color="gui.green" />
+      <Replace tag="[stattype]" value="Weapons" color="gui.orange" />
+      <Replace tag="[STAR]" value="STARs" color="gui.orange" />
+    </Description>
+    <Description tag="talentdescription.doesnotstack" />
+    <Description tag="talentdescription.unlockrecipe">
+      <Replace tag="[itemname]" value="entityname.autoshotgun,entityname.stungundartfulgurium,entityname.riotshield" color="gui.orange" />
+    </Description>
+    <AbilityGroupInterval interval="1">
+      <Abilities>
+        <CharacterAbilityApplyStatusEffectsToAllies maxdistance="600" jobs="Starling" allowself="false">
+          <StatusEffects>
+            <StatusEffect type="OnAbility" target="Character" disabledeltatime="true">
+              <Affliction identifier="drillofficer" strength="1.0" />
+            </StatusEffect>
+          </StatusEffects>
+        </CharacterAbilityApplyStatusEffectsToAllies>
+      </Abilities>
+    </AbilityGroupInterval>
+    <AbilityGroupEffect abilityeffecttype="None">
+      <Abilities>
+        <CharacterAbilityGiveTalentPoints amount="1" />
+      </Abilities>
+    </AbilityGroupEffect>
+    <AddedRecipe itemidentifier="autoshotgun" />
+    <AddedRecipe itemidentifier="stungundartfulgurium" />
+    <AddedRecipe itemidentifier="riotshield" />
+  </Talent>
+  <Talent identifier="squadtactics" abilityeffectsstackwithsametalent="false">
+    <Icon texture="Content/UI/TalentsIcons3.png" sheetindex="5,1" sheetelementsize="128,128" />
+    <Description tag="talentdescription.squadtactics">
+      <Replace tag="[item]" value="entityname.riotshield" color="gui.orange" />
+      <Replace tag="[amount]" value="10" color="gui.green" />
+      <Replace tag="[stat]" value="Movement Speed" color="gui.orange" />
+      <Replace tag="[STAR]" value="STARs" color="gui.orange" />
+    </Description>
+    <Description tag="talentdescription.doesnotstack" />
+    <AbilityGroupInterval interval="1">
+      <!--<Conditions>
+        <AbilityConditionHoldingItem tags="riotshield" />
+      </Conditions> -->
+      <Abilities>
+        <CharacterAbilityApplyStatusEffectsToAllies maxdistance="600" jobs="Starling" allowself="true">
+          <StatusEffects>
+            <StatusEffect type="OnAbility" target="Character" disabledeltatime="true">
+              <Affliction identifier="squadtactics" strength="1.0" />
+            </StatusEffect>
+          </StatusEffects>
+        </CharacterAbilityApplyStatusEffectsToAllies>
+      </Abilities>
+    </AbilityGroupInterval>
+    <AbilityGroupEffect abilityeffecttype="None">
+      <Abilities>
+        <CharacterAbilityGiveStat stattype="MovementSpeed" value="0.10" />
+      </Abilities>
+    </AbilityGroupEffect>
+  </Talent>
+  <Talent identifier="safeguard" abilityeffectsstackwithsametalent="false">
+    <Icon texture="Content/UI/TalentsIcons3.png" sheetindex="4,6" sheetelementsize="128,128" />
+    <Description tag="talentdescription.safeguard">
+      <Replace tag="[item]" value="entityname.riotshield" color="gui.orange" />
+      <Replace tag="[amount]" value="10" color="gui.green" />
+      <Replace tag="[stat]" value="Maximum Health" color="gui.orange" />
+      <Replace tag="[STAR]" value="STARs" color="gui.orange" />
+    </Description>
+    <Description tag="talentdescription.doesnotstack" />
+    <AbilityGroupInterval interval="1">
+      <!--<Conditions>
+        <AbilityConditionHoldingItem tags="riotshield" />
+      </Conditions> -->
+      <Abilities>
+        <CharacterAbilityApplyStatusEffectsToAllies maxdistance="600" jobs="Starling" allowself="true">
+          <StatusEffects>
+            <StatusEffect type="OnAbility" target="Character" disabledeltatime="true">
+              <Affliction identifier="safeguard" strength="1.0" />
+            </StatusEffect>
+          </StatusEffects>
+        </CharacterAbilityApplyStatusEffectsToAllies>
+      </Abilities>
+    </AbilityGroupInterval>
+    <AbilityGroupEffect abilityeffecttype="None">
+      <Abilities>
+        <CharacterAbilityGiveStat stattype="MaximumHealthMultiplier" value="0.10" />
+      </Abilities>
+    </AbilityGroupEffect>
+  </Talent>
+  <Talent identifier="vanguardcadre">
+    <Description tag="talentdescription.vanguardcadre">
+      <Replace tag="[stattype1]" value="Weapons" color="gui.orange" />
+      <Replace tag="[amount1]" value="10" color="gui.green" />
+      <Replace tag="[stattype2]" value="Movement Speed" color="gui.orange" />
+      <Replace tag="[duration]" value="10" color="gui.green" />
+      <Replace tag="[STAR]" value="STARs" color="gui.orange" />
+    </Description>
+    <Icon texture="Content/UI/TalentsIcons1.png" sheetindex="1,4" sheetelementsize="128,128" />
+    <AbilityGroupEffect abilityeffecttype="AfterSubmarineAttacked">
+      <Conditions>
+        <AbilityConditionEvasiveManeuvers />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityApplyStatusEffectsToAllies maxdistance="600" jobs="Starling" allowself="true">
+          <StatusEffects>
+            <StatusEffect type="OnAbility" target="This" multiplyafflictionsbymaxvitality="true" disabledeltatime="true">
+              <Affliction identifier="mobilized" amount="1.0" />
+            </StatusEffect>
+          </StatusEffects>
+        </CharacterAbilityApplyStatusEffectsToAllies>
+      </Abilities>
+    </AbilityGroupEffect>
+  </Talent>
+  <Talent identifier="corporalpunishment">
+    <Description tag="talentdescription.corporalpunishment">
+      <Replace tag="[amount]" value="20" color="gui.green" />
+      <Replace tag="[stat]" value="stattypenames.physicalresistance" color="gui.orange" />
+      <Replace tag="[duration]" value="480" color="gui.green" />
+      <Replace tag="[STARsingle]" value="STAR" color="gui.orange" />
+      <Replace tag="[STAR]" value="STARs" color="gui.orange" />
+    </Description>
+    <Icon texture="Content/UI/TalentsIcons3.png" sheetindex="0,6" sheetelementsize="128,128" />
+    <AbilityGroupEffect abilityeffecttype="OnAttack">
+      <Conditions>
+        <AbilityConditionAttackData weapontype="NoWeapon,Melee" />
+        <AbilityConditionCharacter targettypes="Ally" />
+      </Conditions>
+      <Abilities>
+        <CharacterAbilityApplyStatusEffectsToAllies maxdistance="600" jobs="Starling" allowself="false">
+          <StatusEffects>
+            <StatusEffect type="OnAbility" target="This" multiplyafflictionsbymaxvitality="true" disabledeltatime="true">
+              <Affliction identifier="corporalpunishment" strength="1.0" />
+            </StatusEffect>
+          </StatusEffects>
+        </CharacterAbilityApplyStatusEffectsToAllies>
+      </Abilities>
+    </AbilityGroupEffect>
+  </Talent>
+</Talents>

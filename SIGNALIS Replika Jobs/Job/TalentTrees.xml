@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TalentTrees>
+  <TalentTree jobidentifier="Starling">
+    <SubTree identifier="Starling_primary" nameidentifier="talenttree.primary" type="primary">
+      <TalentOptions requiredtalents="2" maxchosentalents="6">
+        <TalentOption identifier="protectandserve" />
+        <TalentOption identifier="swole" />
+        <TalentOption identifier="relaxed" />
+        <TalentOption identifier="coolhead" />
+        <TalentOption identifier="physicalconditioning" />
+        <TalentOption identifier="firstaidtraining" />
+      </TalentOptions>
+      <TalentOptions requiredtalents="2" maxchosentalents="5">
+        <TalentOption identifier="weaponsmith" />
+        <TalentOption identifier="camaraderie" />
+        <TalentOption identifier="hazingrituals" />
+        <TalentOption identifier="bythebook" />
+        <TalentOption identifier="munitionsexpertise" />
+      </TalentOptions>
+    </SubTree>
+    <SubTree identifier="STARguard" type="specialization" requires="Starling_primary" blocks="STARmarksman,STARofficer">
+      <TalentOptions>
+        <TalentOption identifier="pacificationkit" />
+      </TalentOptions>
+      <TalentOptions>
+        <TalentOption identifier="closecombatant" />
+        <TalentOption identifier="riotsuppression" />
+      </TalentOptions>
+      <TalentOptions>
+        <TalentOption identifier="thrillseeker" />
+      </TalentOptions>
+      <TalentOptions>
+        <TalentOption identifier="implacable" />
+      </TalentOptions>
+    </SubTree>
+    <SubTree identifier="STARmarksman" type="specialization" requires="Starling_primary" blocks="STARguard,STARofficer">
+      <TalentOptions>
+        <TalentOption identifier="gunnut" />
+      </TalentOptions>
+      <TalentOptions>
+        <TalentOption identifier="steadystride" />
+        <TalentOption identifier="tandemfire" />
+      </TalentOptions>
+      <TalentOptions>
+        <TalentOption identifier="supportingfire" />
+        <TalentOption identifier="mowdown" />
+      </TalentOptions>
+      <TalentOptions>
+        <TalentOption identifier="warlord" />
+      </TalentOptions>
+    </SubTree>
+    <SubTree identifier="STARofficer" type="specialization" requires="Starling_primary" blocks="STARguard,STARmarksman">
+      <TalentOptions>
+        <TalentOption identifier="drillofficer" />
+      </TalentOptions>
+      <TalentOptions>
+        <TalentOption identifier="squadtactics" />
+        <TalentOption identifier="safeguard" />
+      </TalentOptions>
+      <TalentOptions>
+        <TalentOption identifier="vanguardcadre" />
+      </TalentOptions>
+      <TalentOptions>
+        <TalentOption identifier="corporalpunishment" />
+      </TalentOptions>
+    </SubTree>
+  </TalentTree>
+  <TalentTree jobidentifier="storch">
+    <SubTree identifier="security_primary" nameidentifier="talenttree.primary" type="primary">
+      <TalentOptions requiredtalents="2" maxchosentalents="6">
+        <TalentOption identifier="protectandserve" />
+        <TalentOption identifier="warstories" />
+        <TalentOption identifier="firstaidtraining" />
+        <TalentOption identifier="physicalconditioning" />
+        <TalentOption identifier="swole" />
+        <TalentOption identifier="buff" />
+      </TalentOptions>
+      <TalentOptions requiredtalents="2" maxchosentalents="5">
+        <TalentOption identifier="weaponsmith" />
+        <TalentOption identifier="bythebook" />
+        <TalentOption identifier="dontpushit" />
+        <TalentOption identifier="bootcamp" />
+        <TalentOption identifier="munitionsexpertise" />
+      </TalentOptions>
+    </SubTree>
+    <SubTree identifier="frogman" type="specialization" requires="security_primary" blocks="enforcer,gunner">
+      <TalentOptions>
+        <TalentOption identifier="boardingparty" />
+      </TalentOptions>
+      <TalentOptions>
+        <TalentOption identifier="scavenger" />
+        <TalentOption identifier="slayer" />
+      </TalentOptions>
+      <TalentOptions>
+        <TalentOption identifier="easyturtle" />
+        <TalentOption identifier="daringdolphin" />
+      </TalentOptions>
+      <TalentOptions>
+        <TalentOption identifier="specops" />
+      </TalentOptions>
+    </SubTree>
+    <SubTree identifier="enforcer" type="specialization" requires="security_primary" blocks="frogman,gunner">
+      <TalentOptions>
+        <TalentOption identifier="pacificationkit" />
+      </TalentOptions>
+      <TalentOptions>
+        <TalentOption identifier="beatcop" />
+        <TalentOption identifier="stonewall" />
+      </TalentOptions>
+      <TalentOptions>
+        <TalentOption identifier="crustyseaman" />
+        <TalentOption identifier="inordinateexsanguination" />
+      </TalentOptions>
+      <TalentOptions>
+        <TalentOption identifier="implacable" />
+      </TalentOptions>
+    </SubTree>
+    <SubTree identifier="gunner" type="specialization" requires="security_primary" blocks="frogman,enforcer">
+      <TalentOptions>
+        <TalentOption identifier="rifleman" />
+      </TalentOptions>
+      <TalentOptions>
+        <TalentOption identifier="tandemfire" />
+        <TalentOption identifier="commando" />
+      </TalentOptions>
+      <TalentOptions>
+        <TalentOption identifier="gunrunner" />
+        <TalentOption identifier="extrapowder" />
+      </TalentOptions>
+      <TalentOptions>
+        <TalentOption identifier="warlord" />
+      </TalentOptions>
+    </SubTree>
+  </TalentTree>
+</TalentTrees>

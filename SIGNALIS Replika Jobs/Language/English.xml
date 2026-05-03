@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<infotexts language="English" nowhitespace="false" translatedname="English">
+  <!--Job.xml-->
+  <jobName.Starling>Starling</jobName.Starling>
+  <jobName.storch>Storch</jobName.storch>
+  <jobdescription.starling>The standard model of the Protektor Security Technicians. Fitted with extended legs, STAR units gracefully tower over most Gestalts. Despite their heavy armor, they can move swiftly with their long stride. Their cool and detached demeanor allows them to analyze situations with objectivity and deploy force as required. Trained in close combat and riot control techniques, they operate best in small squads led by an officer STAR unit equipped with a ballistic shield.</jobdescription.starling>
+  <jobdescription.storch>Each cadre of Protektor Security Technicians is overseen by a Controller Unit, the most common of which is the Storch type. One of the tallest Replika models thanks to their extended legs, Storches figuratively and literally keep a constant birds-eye view of any situation, ready to direct and coordinate their assigned Security Technicians. Their tough, no-nonsense demeanor, though sometimes described as brutal and even cruel, makes them the perfect fit as unwavering sentinels of order.</jobdescription.storch>
+  <!-- Talent Trees -->
+  <talenttree.starguard>Guard</talenttree.starguard>
+  <talenttree.starmarksman>Marksman</talenttree.starmarksman>
+  <talenttree.starofficer>Officer</talenttree.starofficer>
+  <!-- General Talent Names -->
+  <talentname.relaxed>Relaxed</talentname.relaxed>
+  <talentname.smokebreak>Smoke Break</talentname.smokebreak>
+  <talentname.coolhead>Cool Head</talentname.coolhead>
+  <talentname.hazingrituals>Hazing Rituals</talentname.hazingrituals>
+  <!-- Specialized Talent Names -->
+  <talentname.gunnut>Gun Nut</talentname.gunnut>
+  <talentname.drillofficer>Drill Officer</talentname.drillofficer>
+  <talentname.closecombatant>Close Combatant</talentname.closecombatant>
+  <talentname.riotsuppression>Riot Suppression</talentname.riotsuppression>
+  <talentname.deployasrequired>Deploy as Required</talentname.deployasrequired>
+  <talentname.thrillseeker>Thrillseeker</talentname.thrillseeker>
+  <talentname.steadystride>Steady Stride</talentname.steadystride>
+  <talentname.supportingfire>Supporting Fire</talentname.supportingfire>
+  <talentname.mowdown>Mow Down</talentname.mowdown>
+  <talentname.squadtactics>Squad Tactics</talentname.squadtactics>
+  <talentname.safeguard>Safeguard</talentname.safeguard>
+  <talentname.vanguardcadre>Vanguard Cadre</talentname.vanguardcadre>
+  <talentname.corporalpunishment>Corporal Punishment</talentname.corporalpunishment>
+  <!-- General Talent Descriptions -->
+  <talentdescription.hazingrituals>When completing a mission, give the lowest level crew members [amount]% bonus XP if they are [STAR].</talentdescription.hazingrituals>
+  <talentdescription.relaxed>Lose [amount1]% [stattype].\nAllies near you repair [amount2]% faster.</talentdescription.relaxed>
+  <talentdescription.smokebreak>Whenever you smoke, you inflict [amount]% more damage for [duration] seconds.</talentdescription.smokebreak>
+  <talentdescription.coolhead>Inflict [amount1]% more damage and get a [amount2]% reduction to spread.</talentdescription.coolhead>
+  <!-- Specialized Talent Descriptions -->
+  <talentdescription.closecombatant>When in a submarine or in a station, get [amount]% [stat1] and [amount]% [stat2].</talentdescription.closecombatant>
+  <talentdescription.riotsuppression>Inflict [amount1]% more stun and get [amount2]% [stat].</talentdescription.riotsuppression>
+  <talentdescription.deployasrequired>If you have not attacked in [duration] seconds, your next attack has [amount]% increased [affliction].</talentdescription.deployasrequired>
+  <talentdescription.thrillseeker>Whenever you are attacked, heal some health back for a few seconds.</talentdescription.thrillseeker>
+  <talentdescription.steadystride>While aiming, walk [amount1]% faster and gain [amount2]% reduction to spread.</talentdescription.steadystride>
+  <talentdescription.supportingfire>Gain an additional [amount]% [stattype].\nShooting a target makes that target take +[amount]% more damage from gunshots.</talentdescription.supportingfire>
+  <talentdescription.mowdown>Gain [amount1]% [stat1] and [stat2].\nOn killing an enemy with a turret, you get an additional [amount2]% [stat1] for [duration] seconds.</talentdescription.mowdown>
+  <talentdescription.drillofficer>On unlock: Get an extra talent point.\nAll nearby allied [STAR] gain [stattype] twice as fast.</talentdescription.drillofficer>
+  <talentdescription.squadtactics>When holding a [item], all nearby allied [STAR] inflict [amount]% more damage.\nGain +[amount]% [stat].</talentdescription.squadtactics>
+  <talentdescription.safeguard>When holding a [item], you and all nearby allied [STAR] take [amount]% less damage.\nGain +[amount]% [stat].</talentdescription.safeguard>
+  <talentdescription.vanguardcadre>Whenever your submarine takes damage from a monster, you and all nearby allied [STAR] get maximum [stattype1] and +[amount1]% [stattype2] for [duration] seconds.</talentdescription.vanguardcadre>
+  <talentdescription.corporalpunishment>Whenever you hit an allied [STARsingle] with a melee weapon, all nearby allied [STAR] inflict [amount]% more damage and get +[amount]% [stat] for [duration] seconds.</talentdescription.corporalpunishment>
+  <!-- Affliction Names -->
+  <afflictionname.chilledout>Lax</afflictionname.chilledout>
+  <afflictionname.closecombatant>Close Combatant</afflictionname.closecombatant>
+  <afflictionname.thrillseeker>Thrillseeker</afflictionname.thrillseeker>
+  <afflictionname.suppressed>Suppressed</afflictionname.suppressed>
+  <afflictionname.mowdown>Mow Down</afflictionname.mowdown>
+  <afflictionname.drillofficer>STAR Drilling</afflictionname.drillofficer>
+  <afflictionname.squadtactics>Squad Tactics</afflictionname.squadtactics>
+  <afflictionname.safeguard>Safeguarded</afflictionname.safeguard>
+  <afflictionname.mobilized>Mobilized</afflictionname.mobilized>
+  <afflictionname.corporalpunishment>Motivated</afflictionname.corporalpunishment>
+  <!-- Affliction Descriptions -->
+  <afflictiondescription.chilledout>The subject is somewhat calm due to the presence of a lax Starling unit, and works slightly faster as a result.</afflictiondescription.chilledout>
+  <afflictiondescription.chilledout.self>You are somewhat calm due to the presence of a lax Starling unit, and work slightly faster as a result.</afflictiondescription.chilledout.self>
+  <afflictiondescription.closecombatant>The subject is in their element. They attack faster, and resist stuns better.</afflictiondescription.closecombatant>
+  <afflictiondescription.closecombatant.self>You are in your element. You attack faster, and resist stuns better.</afflictiondescription.closecombatant.self>
+  <afflictiondescription.thrillseeker>The subject is riding a masochistic high.</afflictiondescription.thrillseeker>
+  <afflictiondescription.thrillseeker.self>The rush of adrenaline, the taste of oxidant...</afflictiondescription.thrillseeker.self>
+  <afflictiondescription.suppressed>The subject is vulnerable to gunfire as a result of suppression.</afflictiondescription.suppressed>
+  <afflictiondescription.suppressed.self>You are more vulnerable as a result of suppression, taking more damage from gunfire.</afflictiondescription.suppressed.self>
+  <afflictiondescription.mowdown>The subject is in the act of gunning down enemies.</afflictiondescription.mowdown>
+  <afflictiondescription.mowdown.self>You are in the act of gunning down enemies.</afflictiondescription.mowdown.self>
+  <afflictiondescription.drillofficer>A nearby officer's presence motivates this subject's weapons prowess.</afflictiondescription.drillofficer>
+  <afflictiondescription.drillofficer.self>A nearby officer's presence motivates your weapons prowess.</afflictiondescription.drillofficer.self>
+  <afflictiondescription.squadtactics>A nearby officer is motivating the subject, bolstering their damage.</afflictiondescription.squadtactics>
+  <afflictiondescription.squadtactics.self>A nearby officer is motivating you, bolstering your damage.</afflictiondescription.squadtactics.self>
+  <afflictiondescription.safeguard>A nearby officer is motivating the subject, encouraging them in the face of danger.</afflictiondescription.safeguard>
+  <afflictiondescription.safeguard.self>A nearby officer is motivating you, encouraging you in the face of danger.</afflictiondescription.safeguard.self>
+  <afflictiondescription.mobilized>This subject is mobilized to action due to recent events.</afflictiondescription.mobilized>
+  <afflictiondescription.mobilized.self>Why are you reading this? Man the stations!</afflictiondescription.mobilized.self>
+  <afflictiondescription.corporalpunishment>As a result of witnessing or being the subject of punishment from an officer, the subject is motivated to action.</afflictiondescription.corporalpunishment>
+  <afflictiondescription.corporalpunishment.self>As a result of witnessing or being the subject of punishment from an officer, you are motivated to action.</afflictiondescription.corporalpunishment.self>
+</infotexts>

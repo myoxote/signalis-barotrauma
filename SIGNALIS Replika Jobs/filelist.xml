@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<contentpackage name="SIGNALIS Replika Jobs" modversion="1.0.7" corepackage="False" steamworkshopid="3316354374" gameversion="1.7.7.0">
+  <Item file="%ModDir%/Items/items.xml" />
+  <Character file="%ModDir%/Characters/Storch/Storch.xml" />
+  <Character file="%ModDir%/Characters/Starling/Starling.xml" />
+  <Jobs file="%ModDir%/Job/Job.xml" />
+  <TalentTrees file="%ModDir%/Job/TalentTrees.xml" />
+  <Talents file="%ModDir%/Talents/Starling/TalentsStarling.xml" />
+  <Afflictions file="%ModDir%/Talents/AfflictionsReplika.xml" />
+  <Text file="%ModDir%/Language/English.xml" />
+</contentpackage>
